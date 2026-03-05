@@ -1,0 +1,47 @@
+<svg viewBox="75 130 250 235" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a5a7a"/>
+      <stop offset="100%" stop-color="#1e2d4e"/>
+    </linearGradient>
+    <linearGradient id="gd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2540"/>
+      <stop offset="100%" stop-color="#0a1228"/>
+    </linearGradient>
+    <linearGradient id="gs" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3858"/>
+      <stop offset="100%" stop-color="#080e1e"/>
+    </linearGradient>
+    <radialGradient id="gsg" cx="32%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#e0e8f8"/>
+      <stop offset="100%" stop-color="#9aaac8"/>
+    </radialGradient>
+  </defs>
+  <polygon points="90,290 126,270 162,290 126,310" fill="url(#gl)"/>
+  <polygon points="90,290 126,310 126,350 90,330" fill="url(#gs)"/>
+  <polygon points="126,310 162,290 162,330 126,350" fill="url(#gd)"/>
+  <polygon points="90,250 126,230 162,250 126,270" fill="url(#gl)"/>
+  <polygon points="90,250 126,270 126,310 90,290" fill="url(#gs)"/>
+  <polygon points="126,270 162,250 162,290 126,310" fill="url(#gd)"/>
+  <polygon points="90,210 126,190 162,210 126,230" fill="url(#gl)"/>
+  <polygon points="90,210 126,230 126,270 90,250" fill="url(#gs)"/>
+  <polygon points="126,230 162,210 162,250 126,270" fill="url(#gd)"/>
+  <polygon points="90,170 126,150 162,170 126,190" fill="url(#gl)"/>
+  <polygon points="90,170 126,190 126,230 90,210" fill="url(#gs)"/>
+  <polygon points="126,190 162,170 162,210 126,230" fill="url(#gd)"/>
+  <polygon points="162,170 198,150 234,170 198,190" fill="url(#gl)"/>
+  <polygon points="162,170 198,190 198,230 162,210" fill="url(#gs)"/>
+  <polygon points="198,190 234,170 234,210 198,230" fill="url(#gd)"/>
+  <polygon points="234,170 270,150 306,170 270,190" fill="url(#gl)"/>
+  <polygon points="234,170 270,190 270,230 234,210" fill="url(#gs)"/>
+  <polygon points="270,190 306,170 306,210 270,230" fill="url(#gd)"/>
+  <polygon points="162,290 198,270 234,290 198,310" fill="url(#gl)"/>
+  <polygon points="162,290 198,310 198,350 162,330" fill="url(#gs)"/>
+  <polygon points="198,310 234,290 234,330 198,350" fill="url(#gd)"/>
+  <polygon points="234,290 270,270 306,290 270,310" fill="url(#gl)"/>
+  <polygon points="234,290 270,310 270,350 234,330" fill="url(#gs)"/>
+  <polygon points="270,310 306,290 306,330 270,350" fill="url(#gd)"/>
+  <circle cx="270" cy="254" r="36" fill="url(#gsg)"/>
+  <ellipse cx="258" cy="241" rx="10" ry="8" fill="white" opacity="0.8"/>
+</svg>

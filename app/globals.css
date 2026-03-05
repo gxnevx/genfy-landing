@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+/* ─── Dark mode variant for next-themes (class="dark") ─── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design Tokens ─── */
+@theme {
+  --color-bg: var(--nx-bg);
+  --color-card: var(--nx-card);
+  --color-glass: var(--nx-glass);
+  --color-glass-bd: var(--nx-glass-bd);
+  --color-glass-hover: var(--nx-glass-hover);
+  --color-tx: var(--nx-tx);
+  --color-tx2: var(--nx-tx2);
+  --color-tx3: var(--nx-tx3);
+  --color-ac: var(--nx-ac);
+  --color-ac-s: var(--nx-ac-s);
+  --color-ac2: var(--nx-ac2);
+  --color-bd: var(--nx-bd);
+  --color-ok: var(--nx-ok);
+  --color-err: var(--nx-err);
+  --color-nav: var(--nx-nav);
+  --color-surface1: var(--nx-surface1);
+  --color-surface2: var(--nx-surface2);
+  --color-surface3: var(--nx-surface3);
+  --color-white: #fff;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+
+  --radius-glass: 10px;
+  --radius-card: 8px;
+  --radius-btn: 7px;
+  --radius-pill: 6px;
+  --radius-sm: 5px;
+
+  --shadow-nx: var(--nx-sh);
+  --shadow-nx-lg: var(--nx-sh-lg);
+  --shadow-glass-inner: var(--nx-glass-inner);
+  --shadow-glass-glow: var(--nx-glass-glow);
+
+  --animate-fade-in: fade-in 0.4s ease;
+  --animate-fade-in-up: fade-in-up 0.5s ease;
+  --animate-stagger-in: stagger-in 0.35s ease both;
+  --animate-scale-in: scale-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animate-orb-float-1: orb-float-1 25s ease-in-out infinite;
+  --animate-orb-float-2: orb-float-2 30s ease-in-out infinite;
+  --animate-orb-float-3: orb-float-3 35s ease-in-out infinite;
+  --animate-slide-up-sheet: slide-up-sheet 0.3s ease;
+  --animate-gradient-shift: gradient-shift 20s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes stagger-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes orb-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -40px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+  @keyframes orb-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-40px, 30px) scale(0.95); }
+    66% { transform: translate(25px, -15px) scale(1.05); }
+  }
+  @keyframes orb-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(15px, 25px) scale(1.03); }
+    66% { transform: translate(-30px, -20px) scale(0.97); }
+  }
+  @keyframes slide-up-sheet {
+    from { opacity: 0; transform: translateY(100%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bento-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes gradient-shift {
+    0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+    33% { filter: hue-rotate(15deg) brightness(1.05); }
+    66% { filter: hue-rotate(-10deg) brightness(0.95); }
+  }
+  @keyframes hero-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
+
+/* Genfy animated logo */
+@keyframes gf-move {
+  0%    { transform: translate(0,0); }
+  12.5% { transform: translate(18px,-40px); }
+  25%   { transform: translate(36px,-60px); }
+  37.5% { transform: translate(54px,-40px); }
+  50%   { transform: translate(72px,0); }
+  62.5% { transform: translate(54px,-40px); }
+  75%   { transform: translate(36px,-60px); }
+  87.5% { transform: translate(18px,-40px); }
+  100%  { transform: translate(0,0); }
+}
+@keyframes gf-squash {
+  0%   { transform: scale(1,1); }
+  8%   { transform: scale(1.2,.8); }
+  16%  { transform: scale(1,1); }
+  48%  { transform: scale(1,1); }
+  58%  { transform: scale(1.2,.8); }
+  66%  { transform: scale(1,1); }
+  100% { transform: scale(1,1); }
+}
+@keyframes gf-tiltL {
+  0%   { transform: rotate(-6deg); }
+  8%   { transform: rotate(0deg); }
+  48%, 100% { transform: rotate(0deg); }
+}
+@keyframes gf-tiltR {
+  0%, 48% { transform: rotate(0deg); }
+  52%     { transform: rotate(6deg); }
+  60%     { transform: rotate(0deg); }
+  100%    { transform: rotate(0deg); }
+}
+
+/* ─── Light theme variables (default) ─── */
+:root {
+  --nx-bg: #f4f4f5;
+  --nx-card: rgba(0,0,0,0.02);
+  --nx-glass: rgba(255,255,255,0.75);
+  --nx-glass-bd: rgba(0,0,0,0.07);
+  --nx-glass-hover: rgba(255,255,255,0.88);
+  --nx-tx: rgba(0,0,0,0.87);
+  --nx-tx2: rgba(0,0,0,0.52);
+  --nx-tx3: rgba(0,0,0,0.35);
+  --nx-ac: #2563eb;
+  --nx-ac-s: rgba(37,99,235,0.07);
+  --nx-ac2: #3b82f6;
+  --nx-ac-grad: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+  --nx-bd: rgba(0,0,0,0.07);
+  --nx-ok: #22c55e;
+  --nx-err: #dc2626;
+  --nx-nav: rgba(244,244,245,0.90);
+  --nx-sh: 0 4px 20px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.7);
+  --nx-sh-lg: 0 12px 40px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.8);
+  --nx-surface1: rgba(0,0,0,0.02);
+  --nx-surface2: rgba(0,0,0,0.04);
+  --nx-surface3: rgba(0,0,0,0.06);
+  --nx-glass-inner: inset 0 1px 0 rgba(255,255,255,0.7);
+  --nx-glass-glow: 0 0 24px rgba(0,0,0,0.03);
+  --nx-orb1: rgba(59,130,246,0.04);
+  --nx-orb2: rgba(80,80,100,0.03);
+  --nx-orb3: rgba(37,99,235,0.02);
+  --nx-accent-line: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  --nx-accent-rgb: 59, 130, 246;
+  --nx-ac-on: #fff;
+  --focus-color: rgba(59, 130, 246, 0.8);
+}
+
+/* ─── Dark theme variables ─── */
+.dark {
+  --nx-bg: #0a0a0a;
+  --nx-card: rgba(255,255,255,0.03);
+  --nx-glass: rgba(255,255,255,0.04);
+  --nx-glass-bd: rgba(255,255,255,0.08);
+  --nx-glass-hover: rgba(255,255,255,0.07);
+  --nx-tx: rgba(255,255,255,0.92);
+  --nx-tx2: rgba(255,255,255,0.50);
+  --nx-tx3: rgba(255,255,255,0.30);
+  --nx-ac: #3b82f6;
+  --nx-ac-s: rgba(59,130,246,0.1);
+  --nx-ac2: #60a5fa;
+  --nx-ac-grad: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+  --nx-bd: rgba(255,255,255,0.07);
+  --nx-ok: #22c55e;
+  --nx-err: #ef4444;
+  --nx-nav: rgba(14,14,14,0.85);
+  --nx-sh: 0 4px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+  --nx-sh-lg: 0 12px 48px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.05);
+  --nx-surface1: rgba(255,255,255,0.03);
+  --nx-surface2: rgba(255,255,255,0.05);
+  --nx-surface3: rgba(255,255,255,0.07);
+  --nx-glass-inner: inset 0 1px 0 rgba(255,255,255,0.05);
+  --nx-glass-glow: 0 0 24px rgba(0,0,0,0.3);
+  --nx-orb1: rgba(59,130,246,0.04);
+  --nx-orb2: rgba(80,80,100,0.03);
+  --nx-orb3: rgba(37,99,235,0.02);
+  --nx-accent-line: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  --nx-accent-rgb: 59, 130, 246;
+  --nx-ac-on: #fff;
+  --focus-color: rgba(59, 130, 246, 0.8);
+}
+
+/* ─── Custom Utilities ─── */
+@utility glass {
+  background: var(--nx-glass);
+  border: 1px solid var(--nx-glass-bd);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-glass);
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+}
+
+@utility glass-card {
+  background: var(--nx-glass);
+  border: 1px solid var(--nx-glass-bd);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-card);
+  box-shadow: var(--nx-glass-inner);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@utility glass-strong {
+  background: var(--nx-glass);
+  border: 1px solid var(--nx-glass-bd);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-glass);
+}
+
+@utility btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-image: var(--nx-ac-grad);
+  border: none;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  color: var(--nx-ac-on);
+  text-decoration: none;
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--nx-bd);
+  border-radius: var(--radius-pill);
+  color: var(--nx-tx2);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+@utility accent-line {
+  height: 1px;
+  background: var(--nx-accent-line);
+  opacity: 0.3;
+}
+
+/* ─── Base Reset ─── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  html, body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.18); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(128,128,128,0.28); }
+
+/* ─── Global Button Transitions ─── */
+button {
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+button:active:not(:disabled) { transform: scale(0.97); }
+
+/* ─── Focus Visible ─── */
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--focus-color, rgba(59, 130, 246, 0.8));
+  outline-offset: 2px;
+}
+
+/* ─── Selection Color ─── */
+::selection {
+  background: rgba(var(--nx-accent-rgb), 0.18);
+  color: inherit;
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
