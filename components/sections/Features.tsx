@@ -37,12 +37,12 @@ export function Features() {
           <p className="text-tx2 text-sm max-w-lg mx-auto">{t.features_subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {features.map((f, i) => (
             <div
               key={f.icon}
               className={cn(
-                "glass-card flex flex-col gap-3 p-5 relative overflow-hidden will-change-transform transition-all duration-200 group hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] animate-[bento-in_0.4s_ease-out_both] cursor-default",
+                "glass-card flex flex-col gap-3 p-6 h-full relative overflow-hidden will-change-transform transition-all duration-200 group hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] animate-[bento-in_0.4s_ease-out_both] cursor-default",
                 f.colSpan === 2 && "md:col-span-2"
               )}
               style={{ animationDelay: `${i * 55}ms` }}

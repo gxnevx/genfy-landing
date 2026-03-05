@@ -43,7 +43,7 @@ export function RecentUpdates() {
 
             return (
               <RevealOnScroll key={update.version} delay={i * 80}>
-                <div className="glass-card p-5 group hover:-translate-y-0.5 hover:border-ac/[0.14] transition-all duration-200">
+                <div className="glass-card p-6 group hover:-translate-y-0.5 hover:border-ac/[0.14] transition-all duration-200">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-2.5">
                       <div className={`w-7 h-7 rounded-md flex items-center justify-center ${meta.bg} ${meta.color}`}>

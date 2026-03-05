@@ -84,14 +84,11 @@ export function Platform() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {PLATFORM_ITEMS.map((item, i) => (
-            <RevealOnScroll key={item.nameKey} delay={i * 60}>
+            <RevealOnScroll key={item.nameKey} delay={i * 60} className={cn("h-full", item.colSpan === 2 && "md:col-span-2")}>
               <div
-                className={cn(
-                  "glass-card p-5 flex flex-col gap-3 group transition-all duration-200 hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] cursor-default",
-                  item.colSpan === 2 && "md:col-span-2"
-                )}
+                className="glass-card p-6 h-full flex flex-col gap-3 group transition-all duration-200 hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] cursor-default"
               >
                 <div className="flex items-center gap-3">
                   <div

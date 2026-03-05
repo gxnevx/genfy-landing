@@ -69,8 +69,8 @@ export function TargetUsers() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {USER_TYPES.map((user, i) => (
-            <RevealOnScroll key={user.nameKey} delay={i * 70}>
-              <div className="glass-card p-6 flex flex-col gap-4 group transition-all duration-200 hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] cursor-default">
+            <RevealOnScroll key={user.nameKey} delay={i * 70} className="h-full">
+              <div className="glass-card p-6 h-full flex flex-col gap-4 group transition-all duration-200 hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] cursor-default">
                 {/* Icon with gradient background */}
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${user.gradient} text-tx2 group-hover:text-tx transition-colors duration-200`}

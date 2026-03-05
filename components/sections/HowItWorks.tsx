@@ -23,10 +23,10 @@ export function HowItWorks() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {steps.map((s, i) => (
-            <RevealOnScroll key={s.step} delay={i * 120}>
-              <div className="glass-card p-6 relative group hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] transition-all duration-200 cursor-default">
+            <RevealOnScroll key={s.step} delay={i * 120} className="h-full">
+              <div className="glass-card p-6 h-full flex flex-col relative group hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] transition-all duration-200 cursor-default">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 text-white font-bold text-sm" style={{ backgroundImage: "var(--nx-ac-grad)" }}>
                   {s.step}
                 </div>

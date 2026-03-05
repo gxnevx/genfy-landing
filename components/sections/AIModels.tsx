@@ -86,10 +86,10 @@ export function AIModels() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {MODELS.map((model, i) => (
-            <RevealOnScroll key={model.nameKey} delay={i * 80}>
+            <RevealOnScroll key={model.nameKey} delay={i * 80} className="h-full">
               <div
                 className={cn(
-                  "glass-card p-6 relative overflow-hidden group transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--nx-glass-glow)] cursor-default",
+                  "glass-card p-6 h-full flex flex-col relative overflow-hidden group transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--nx-glass-glow)] cursor-default",
                   (model.badge === "popular" || model.badge === "quality") &&
                     "border-[rgba(255,255,255,0.12)]"
                 )}
@@ -142,12 +142,12 @@ export function AIModels() {
                 </div>
 
                 {/* Description */}
-                <p className="text-tx2 text-sm leading-relaxed mb-5">
+                <p className="text-tx2 text-sm leading-relaxed mb-5 flex-1">
                   {t[model.descKey] as string}
                 </p>
 
                 {/* Specs row */}
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 gap-2 mt-auto">
                   <div className="flex flex-col gap-1">
                     <span className="text-tx3 text-[9px] font-semibold tracking-[0.5px] uppercase">
                       {t.model_label_quality}
