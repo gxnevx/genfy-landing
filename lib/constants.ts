@@ -1,5 +1,5 @@
 export const SITE_URL = "https://home.genfy.studio";
-export const APP_URL = "https://nexus.studio";
+export const APP_URL = "https://genfy.studio";
 export const APP_NAME = "Genfy";
 export const APP_DESCRIPTION =
   "Create professional AI-generated videos from product images in seconds. Upload, generate, download — it's that simple.";
