@@ -1,4 +1,4 @@
-export const SITE_URL = "https://genfy.app";
+export const SITE_URL = "https://home.genfy.studio";
 export const APP_URL = "https://nexus.studio";
 export const APP_NAME = "Genfy";
 export const APP_DESCRIPTION =
