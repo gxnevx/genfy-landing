@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-03-05T00:00:00Z",
+  "updates": [
+    {
+      "version": "v1.4.0",
+      "date": "2026-03-05",
+      "type": "feature",
+      "title_en": "VEO 3.1 Engine Support",
+      "title_pt": "Suporte ao Motor VEO 3.1",
+      "items_en": [
+        "Added Vidgo VEO 3.1-fast as a new video generation engine",
+        "Improved error handling and retry logic for all video providers",
+        "Better task loss detection for Kie.ai engine with automatic recovery"
+      ],
+      "items_pt": [
+        "Adicionado Vidgo VEO 3.1-fast como novo motor de geração de vídeo",
+        "Melhoria no tratamento de erros e lógica de retry para todos os provedores",
+        "Melhor detecção de perda de tarefa no motor Kie.ai com recuperação automática"
+      ]
+    },
+    {
+      "version": "v1.3.0",
+      "date": "2026-02-20",
+      "type": "improvement",
+      "title_en": "Token System Overhaul",
+      "title_pt": "Reformulação do Sistema de Tokens",
+      "items_en": [
+        "Atomic token deduction via database RPC — no more double-spend issues",
+        "Automatic token refund on generation failure",
+        "Admin bypass mode for unlimited generation during testing"
+      ],
+      "items_pt": [
+        "Dedução atômica de tokens via RPC — sem mais problemas de gasto duplo",
+        "Reembolso automático de tokens em falha de geração",
+        "Modo bypass de admin para geração ilimitada durante testes"
+      ]
+    },
+    {
+      "version": "v1.2.0",
+      "date": "2026-02-10",
+      "type": "feature",
+      "title_en": "Auto Captions & Multi-Engine",
+      "title_pt": "Legendas Automáticas e Multi-Motor",
+      "items_en": [
+        "AI-generated captions and hashtags automatically for every video",
+        "Engine selector: choose between Sora, VEO 3, Telegram, and Advanced",
+        "Improved product image recognition accuracy"
+      ],
+      "items_pt": [
+        "Legendas e hashtags geradas por IA automaticamente para cada vídeo",
+        "Seletor de motor: escolha entre Sora, VEO 3, Telegram e Advanced",
+        "Melhoria na precisão de reconhecimento de imagem de produto"
+      ]
+    }
+  ]
+}

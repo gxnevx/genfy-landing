@@ -21,10 +21,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t.nav_features, href: "#features" },
-    { label: t.nav_howItWorks, href: "#how-it-works" },
-    { label: t.nav_pricing, href: "#pricing" },
-    { label: t.nav_updates, href: "#updates" },
+    { label: t.nav_features,    href: "#features" },
+    { label: t.nav_models,      href: "#models" },
+    { label: t.nav_platform,    href: "#platform" },
+    { label: t.nav_pricing,     href: "#pricing" },
+    { label: t.nav_updates,     href: "#updates" },
   ];
 
   return (
@@ -35,14 +36,12 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 group">
+        <a href="#" className="flex items-center gap-2.5 group cursor-pointer">
           <GenfyLogo size={28} />
-          <span className="text-tx font-semibold text-sm tracking-[8px] uppercase">
-            GENFY
-          </span>
+          <span className="text-tx font-semibold text-sm tracking-[8px] uppercase">GENFY</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -67,7 +66,7 @@ export function Navbar() {
           </a>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden w-8 h-8 flex items-center justify-center text-tx3 hover:text-tx transition-colors"
+            className="md:hidden w-8 h-8 flex items-center justify-center text-tx3 hover:text-tx transition-colors cursor-pointer"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}

@@ -2,7 +2,7 @@
 
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { useLang } from "@/contexts/LangContext";
-import { Upload, Wand2, Download } from "lucide-react";
+import { Upload, Wand2, Share2 } from "lucide-react";
 
 export function HowItWorks() {
   const { t } = useLang();
@@ -10,7 +10,7 @@ export function HowItWorks() {
   const steps = [
     { step: 1, title: t.howItWorks_step1_title, desc: t.howItWorks_step1_desc, icon: <Upload size={22} /> },
     { step: 2, title: t.howItWorks_step2_title, desc: t.howItWorks_step2_desc, icon: <Wand2 size={22} /> },
-    { step: 3, title: t.howItWorks_step3_title, desc: t.howItWorks_step3_desc, icon: <Download size={22} /> },
+    { step: 3, title: t.howItWorks_step3_title, desc: t.howItWorks_step3_desc, icon: <Share2 size={22} /> },
   ];
 
   return (
@@ -26,7 +26,7 @@ export function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
           {steps.map((s, i) => (
             <RevealOnScroll key={s.step} delay={i * 120}>
-              <div className="glass-card p-6 relative group hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] transition-all duration-200">
+              <div className="glass-card p-6 relative group hover:-translate-y-1 hover:border-ac/[0.14] hover:shadow-[var(--nx-glass-glow)] transition-all duration-200 cursor-default">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 text-white font-bold text-sm" style={{ backgroundImage: "var(--nx-ac-grad)" }}>
                   {s.step}
                 </div>

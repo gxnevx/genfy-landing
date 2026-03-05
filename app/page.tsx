@@ -5,6 +5,9 @@ import { AnimatedOrbs } from "@/components/ui/AnimatedOrbs";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Features } from "@/components/sections/Features";
+import { AIModels } from "@/components/sections/AIModels";
+import { Platform } from "@/components/sections/Platform";
+import { TargetUsers } from "@/components/sections/TargetUsers";
 import { Pricing } from "@/components/sections/Pricing";
 import { RecentUpdates } from "@/components/sections/RecentUpdates";
 import { CallToAction } from "@/components/sections/CallToAction";
@@ -33,6 +36,12 @@ export default function Home() {
         <HowItWorks />
         <div className="accent-line max-w-4xl mx-auto" />
         <Features />
+        <div className="accent-line max-w-4xl mx-auto" />
+        <AIModels />
+        <div className="accent-line max-w-4xl mx-auto" />
+        <Platform />
+        <div className="accent-line max-w-4xl mx-auto" />
+        <TargetUsers />
         <div className="accent-line max-w-4xl mx-auto" />
         <Pricing />
         <div className="accent-line max-w-4xl mx-auto" />

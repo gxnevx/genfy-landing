@@ -15,15 +15,18 @@ export function CallToAction() {
           <div className="glass-card p-10 md:p-16 text-center relative overflow-hidden">
             <div
               className="absolute inset-0 opacity-20"
-              style={{ background: "radial-gradient(ellipse at center, rgba(59,130,246,0.15), transparent 70%)" }}
+              style={{ background: "radial-gradient(ellipse at center, rgba(59,130,246,0.18), transparent 70%)" }}
             />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-tx tracking-tight mb-4">{t.cta_title}</h2>
               <p className="text-tx2 text-sm max-w-md mx-auto mb-8">{t.cta_subtitle}</p>
-              <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="btn-accent px-8 py-3 text-sm gap-2">
-                {t.cta_button}
-                <ArrowRight size={16} />
-              </a>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="btn-accent px-8 py-3 text-sm gap-2">
+                  {t.cta_button}
+                  <ArrowRight size={15} />
+                </a>
+                <a href="#platform" className="btn-ghost px-6 py-2.5 text-sm">{t.cta_secondary}</a>
+              </div>
             </div>
           </div>
         </RevealOnScroll>
