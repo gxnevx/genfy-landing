@@ -121,8 +121,8 @@ export function Pricing() {
                 </div>
 
                 <ul className="flex flex-col gap-2 mb-8 flex-1">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2">
+                  {plan.features.map((f, fi) => (
+                    <li key={fi} className="flex items-start gap-2">
                       <Check size={12} className="text-ac shrink-0 mt-0.5" />
                       <span className="text-tx2 text-xs leading-relaxed">{f}</span>
                     </li>
