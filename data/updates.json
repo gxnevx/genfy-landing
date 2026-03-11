@@ -1,55 +1,87 @@
 {
-  "generated_at": "2026-03-05T00:00:00Z",
+  "generated_at": "2026-03-11T23:03:59.392Z",
   "updates": [
     {
-      "version": "v1.4.0",
-      "date": "2026-03-05",
+      "version": "v1.5.0",
+      "date": "2026-03-11",
       "type": "feature",
-      "title_en": "VEO 3.1 Engine Support",
-      "title_pt": "Suporte ao Motor VEO 3.1",
+      "title_en": "TikTok Official API Integration & Product Feed Upgrades",
+      "title_pt": "Integração Oficial com API do TikTok e Melhorias no Feed de Produtos",
       "items_en": [
-        "Added new VEO 3.1 video generation engine",
-        "Improved error handling and retry logic for all video engines",
-        "Better task loss detection with automatic recovery"
+        "Integrated TikTok Official API for seamless video draft uploads and improved error handling.",
+        "Added 'Start with TikTok' signup flow for easier onboarding.",
+        "Auto-link TikTok Shop products to your videos for faster product tagging.",
+        "Trending products feed now supports sorting, infinite scroll, and category badges.",
+        "Product names on gallery video cards are now clickable links."
       ],
       "items_pt": [
-        "Adicionado novo motor de geração de vídeo VEO 3.1",
-        "Melhoria no tratamento de erros e lógica de retry para todos os motores",
-        "Melhor detecção de perda de tarefa com recuperação automática"
+        "Integração com a API Oficial do TikTok para uploads de rascunhos de vídeo e melhor tratamento de erros.",
+        "Novo fluxo de cadastro 'Comece com o TikTok' para facilitar o acesso.",
+        "Vinculação automática de produtos do TikTok Shop aos seus vídeos para marcação mais rápida.",
+        "Feed de produtos em alta agora com ordenação, rolagem infinita e categorias destacadas.",
+        "Nomes de produtos nos vídeos da galeria agora são links clicáveis."
+      ]
+    },
+    {
+      "version": "v1.4.1",
+      "date": "2026-03-10",
+      "type": "improvement",
+      "title_en": "Retry for Failed Videos & Enhanced Image Handling",
+      "title_pt": "Repetir Vídeos com Falha e Melhorias nas Imagens",
+      "items_en": [
+        "Added a retry button for failed videos, with persistent image storage for easier recovery.",
+        "Improved image propagation and update handling for video retries."
+      ],
+      "items_pt": [
+        "Adicionado botão de repetição para vídeos com falha, com armazenamento persistente de imagens para facilitar a recuperação.",
+        "Melhor propagação e atualização de imagens ao tentar novamente vídeos."
+      ]
+    },
+    {
+      "version": "v1.4.0",
+      "date": "2026-03-09",
+      "type": "feature",
+      "title_en": "Trending Products Feed Launched",
+      "title_pt": "Lançamento do Feed de Produtos em Alta",
+      "items_en": [
+        "Introduced a trending products feed with sorting, pagination, and multi-category support.",
+        "Browse top products with new filters and infinite scroll."
+      ],
+      "items_pt": [
+        "Novo feed de produtos em alta com ordenação, paginação e suporte a múltiplas categorias.",
+        "Navegue pelos principais produtos com novos filtros e rolagem infinita."
+      ]
+    },
+    {
+      "version": "v1.3.1",
+      "date": "2026-03-08",
+      "type": "fix",
+      "title_en": "TikTok Authentication & Gallery Fixes",
+      "title_pt": "Correções de Autenticação TikTok e Galeria",
+      "items_en": [
+        "Replaced TikTok headed authentication with cookie import for smoother login.",
+        "Handled session expiration and improved error logging for TikTok login.",
+        "Fixed manifest icons and improved listings display."
+      ],
+      "items_pt": [
+        "Autenticação TikTok agora via importação de cookies para login mais fácil.",
+        "Tratamento de expiração de sessão e melhorias nos logs de erro para login TikTok.",
+        "Correção dos ícones do manifesto e melhorias na exibição de listagens."
       ]
     },
     {
       "version": "v1.3.0",
-      "date": "2026-02-20",
-      "type": "improvement",
-      "title_en": "Token System Overhaul",
-      "title_pt": "Reformulação do Sistema de Tokens",
-      "items_en": [
-        "Atomic token deduction via database RPC — no more double-spend issues",
-        "Automatic token refund on generation failure",
-        "Admin bypass mode for unlimited generation during testing"
-      ],
-      "items_pt": [
-        "Dedução atômica de tokens via RPC — sem mais problemas de gasto duplo",
-        "Reembolso automático de tokens em falha de geração",
-        "Modo bypass de admin para geração ilimitada durante testes"
-      ]
-    },
-    {
-      "version": "v1.2.0",
-      "date": "2026-02-10",
+      "date": "2026-03-06",
       "type": "feature",
-      "title_en": "Auto Captions & Multi-Engine",
-      "title_pt": "Legendas Automáticas e Multi-Motor",
+      "title_en": "Video Mode & Product Fidelity Enforcement",
+      "title_pt": "Modo de Vídeo e Garantia de Fidelidade de Produto",
       "items_en": [
-        "AI-generated captions and hashtags automatically for every video",
-        "Engine selector: choose between Sora, VEO 3, Telegram, and Advanced",
-        "Improved product image recognition accuracy"
+        "Added video mode support with improved product fidelity in generated videos.",
+        "Enhanced error handling for heavy load and processing issues."
       ],
       "items_pt": [
-        "Legendas e hashtags geradas por IA automaticamente para cada vídeo",
-        "Seletor de motor: escolha entre Sora, VEO 3, Telegram e Advanced",
-        "Melhoria na precisão de reconhecimento de imagem de produto"
+        "Adicionado suporte ao modo de vídeo com maior fidelidade dos produtos nos vídeos gerados.",
+        "Melhor tratamento de erros para situações de alta demanda e problemas de processamento."
       ]
     }
   ]

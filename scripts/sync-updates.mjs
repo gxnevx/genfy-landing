@@ -26,7 +26,7 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || "gxnevx";
 const REPOS = ["nexus-workflow", "nexusvideogenerator"];
 const COMMITS_PER_REPO = 30;
-const OPENAI_MODEL = "gpt-4.1-mini";
+const OPENAI_MODEL = "gpt-4.1";
 
 // How many versions to show on the landing page
 const MAX_UPDATES = 5;
