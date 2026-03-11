@@ -8,6 +8,7 @@ export const SOCIAL_LINKS = {
   instagram: "https://instagram.com/genfy.studio",
   linkedin: "https://linkedin.com/company/genfy-app",
   whatsapp: "https://chat.whatsapp.com/CVKDchoK3BZJH0NaGmcpvy",
+  twitter: "https://x.com/genfy_studio",
 } as const;
 
 export const NAV_LINKS = [
@@ -39,7 +40,7 @@ export const FEATURES = [
   {
     icon: "Zap",
     label: "Multiple Engines",
-    description: "Choose from Sora, VEO 3, and more — each optimized for different styles.",
+    description: "Choose from Sora, VEO 3.1, Grok Imagine, and more — each optimized for different styles.",
     iconBg: "rgba(245,158,11,0.1)",
   },
   {
@@ -92,7 +93,7 @@ export const PRICING_PLANS = [
     description: "For creators who need more",
     features: [
       "100 tokens / month",
-      "All engines (Sora, VEO 3)",
+      "All engines (Sora, VEO 3.1, Grok Imagine)",
       "1080p output",
       "Priority generation",
       "Auto captions",

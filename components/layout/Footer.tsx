@@ -3,7 +3,7 @@
 import { GenfyLogo } from "@/components/app/GenfyLogo";
 import { useLang } from "@/contexts/LangContext";
 import { SOCIAL_LINKS, APP_URL } from "@/lib/constants";
-import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { Instagram, Linkedin, Mail, MessageCircle, Twitter } from "lucide-react";
 
 export function Footer() {
   const { t } = useLang();
@@ -61,6 +61,9 @@ export function Footer() {
               </a>
               <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-pill glass-card text-tx3 hover:text-green-400 transition-colors cursor-pointer" aria-label="WhatsApp Community">
                 <MessageCircle size={15} />
+              </a>
+              <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-pill glass-card text-tx3 hover:text-ac transition-colors cursor-pointer" aria-label="X / Twitter">
+                <Twitter size={15} />
               </a>
             </div>
             <a

@@ -43,7 +43,7 @@ const ENGINES: Engine[] = [
   },
   {
     name: "Genfy Prime",
-    tag: "VEO 3.1",
+    tag: "Grok Imagine",
     cost: 150,
     quality: "4K",
     speed: "Standard",
@@ -53,7 +53,7 @@ const ENGINES: Engine[] = [
   },
   {
     name: "Genfy Advanced",
-    tag: "VEO 3 Fast",
+    tag: "VEO 3.1",
     cost: 200,
     quality: "1080p",
     speed: "Fast",
