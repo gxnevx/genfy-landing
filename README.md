@@ -113,10 +113,6 @@ No environment variables required — the landing page is fully static. All URLs
 | 🐦 X | [@genfy_studio](https://x.com/genfy_studio) |
 | 💬 WhatsApp | [Community Channel](https://chat.whatsapp.com/CVKDchoK3BZJH0NaGmcpvy) |
 
-## Author
-
-**Guilherme Neves Ferreira** — [@gxnevx](https://github.com/gxnevx)
-
 ## License
 
 Proprietary. All rights reserved.
