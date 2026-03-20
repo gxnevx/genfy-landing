@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Call Especial – Começando no TikTok</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background: #000000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 1080px;
+      height: 1080px;
+      background: #000000;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* background glow */
+    .glow-top {
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(225,29,72,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .glow-bottom {
+      position: absolute;
+      bottom: -200px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(30,27,75,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* glass pill – "AO VIVO NO DISCORD" */
+    .pill {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 100px;
+      padding: 10px 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 48px;
+      backdrop-filter: blur(12px);
+    }
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #E11D48;
+      box-shadow: 0 0 8px #E11D48;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .pill-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #F8FAFC;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* main content */
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .label {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(248,250,252,0.5);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 96px;
+      font-weight: 800;
+      color: #F8FAFC;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+    .title span {
+      color: #E11D48;
+    }
+
+    .subtitle {
+      margin-top: 28px;
+      font-size: 26px;
+      font-weight: 400;
+      color: rgba(248,250,252,0.55);
+      max-width: 620px;
+      line-height: 1.5;
+    }
+
+    /* divider */
+    .divider {
+      position: relative;
+      z-index: 2;
+      width: 60px;
+      height: 2px;
+      background: #E11D48;
+      border-radius: 2px;
+      margin: 52px auto;
+    }
+
+    /* bottom logo */
+    .logo-row {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-row svg {
+      width: 40px;
+      height: 40px;
+    }
+    .logo-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #F8FAFC;
+      letter-spacing: -0.5px;
+    }
+
+    /* subtle grid overlay */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow-top"></div>
+    <div class="glow-bottom"></div>
+    <div class="grid"></div>
+
+    <!-- pill -->
+    <div class="pill">
+      <div class="pill-dot"></div>
+      <span class="pill-text">Ao vivo no Discord</span>
+    </div>
+
+    <!-- main -->
+    <div class="content">
+      <div class="label">Call especial</div>
+      <div class="title">Começando<br>no <span>TikTok</span></div>
+      <div class="subtitle">
+        Para quem tá no início e quer ter resultados reais no TikTok Shop
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- logo -->
+    <div class="logo-row">
+      <svg viewBox="75 130 250 235" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4a5a7a"/>
+            <stop offset="100%" stop-color="#1e2d4e"/>
+          </linearGradient>
+          <linearGradient id="gd" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1a2540"/>
+            <stop offset="100%" stop-color="#0a1228"/>
+          </linearGradient>
+          <linearGradient id="gs" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2a3858"/>
+            <stop offset="100%" stop-color="#080e1e"/>
+          </linearGradient>
+          <radialGradient id="gsg" cx="32%" cy="28%" r="65%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="40%" stop-color="#e0e8f8"/>
+            <stop offset="100%" stop-color="#9aaac8"/>
+          </radialGradient>
+        </defs>
+        <polygon points="90,290 126,270 162,290 126,310" fill="url(#gl)"/>
+        <polygon points="90,290 126,310 126,350 90,330" fill="url(#gs)"/>
+        <polygon points="126,310 162,290 162,330 126,350" fill="url(#gd)"/>
+        <polygon points="90,250 126,230 162,250 126,270" fill="url(#gl)"/>
+        <polygon points="90,250 126,270 126,310 90,290" fill="url(#gs)"/>
+        <polygon points="126,270 162,250 162,290 126,310" fill="url(#gd)"/>
+        <polygon points="90,210 126,190 162,210 126,230" fill="url(#gl)"/>
+        <polygon points="90,210 126,230 126,270 90,250" fill="url(#gs)"/>
+        <polygon points="126,230 162,210 162,250 126,270" fill="url(#gd)"/>
+        <polygon points="90,170 126,150 162,170 126,190" fill="url(#gl)"/>
+        <polygon points="90,170 126,190 126,230 90,210" fill="url(#gs)"/>
+        <polygon points="126,190 162,170 162,210 126,230" fill="url(#gd)"/>
+        <polygon points="162,170 198,150 234,170 198,190" fill="url(#gl)"/>
+        <polygon points="162,170 198,190 198,230 162,210" fill="url(#gs)"/>
+        <polygon points="198,190 234,170 234,210 198,230" fill="url(#gd)"/>
+        <polygon points="234,170 270,150 306,170 270,190" fill="url(#gl)"/>
+        <polygon points="234,170 270,190 270,230 234,210" fill="url(#gs)"/>
+        <polygon points="270,190 306,170 306,210 270,230" fill="url(#gd)"/>
+        <polygon points="162,290 198,270 234,290 198,310" fill="url(#gl)"/>
+        <polygon points="162,290 198,310 198,350 162,330" fill="url(#gs)"/>
+        <polygon points="198,310 234,290 234,330 198,350" fill="url(#gd)"/>
+        <polygon points="234,290 270,270 306,290 270,310" fill="url(#gl)"/>
+        <polygon points="234,290 270,310 270,350 234,330" fill="url(#gs)"/>
+        <polygon points="270,310 306,290 306,330 270,350" fill="url(#gd)"/>
+        <circle cx="270" cy="254" r="36" fill="url(#gsg)"/>
+        <ellipse cx="258" cy="241" rx="10" ry="8" fill="white" opacity="0.8"/>
+      </svg>
+      <span class="logo-name">Genfy</span>
+    </div>
+  </div>
+</body>
+</html>
