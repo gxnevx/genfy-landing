@@ -2,7 +2,7 @@ export const SITE_URL = "https://home.genfy.studio";
 export const APP_URL = "https://genfy.studio";
 export const APP_NAME = "Genfy";
 export const APP_DESCRIPTION =
-  "Create professional AI-generated videos from product images in seconds. Upload, generate, download — it's that simple.";
+  "Encontre produtos em alta, valide oportunidades e transforme contexto comercial em vídeos prontos para TikTok Shop.";
 
 export const SOCIAL_LINKS = {
   instagram: "https://instagram.com/genfy.studio",
@@ -12,9 +12,9 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Tools", href: "#tools" },
-  { label: "Engines", href: "#models" },
-  { label: "Social", href: "#social" },
+  { label: "Results", href: "#results" },
+  { label: "Workflow", href: "#workflow" },
+  { label: "Product", href: "#product" },
 ] as const;
 
 export const TOOL_ROUTES = [
@@ -40,7 +40,7 @@ export const FEATURES = [
   {
     icon: "Zap",
     label: "Multiple Engines",
-    description: "Choose from Sora, VEO 3.1, Grok Imagine, and more — each optimized for different styles.",
+    description: "Choose from Sora, VEO 3.1, Grok Imagine, and more - each optimized for different styles.",
     iconBg: "rgba(245,158,11,0.1)",
   },
   {
@@ -76,12 +76,7 @@ export const PRICING_PLANS = [
     price: "R$ 0",
     period: "",
     description: "Try Genfy with limited tokens",
-    features: [
-      "5 free tokens",
-      "Standard engine",
-      "720p output",
-      "Community support",
-    ],
+    features: ["5 free tokens", "Standard engine", "720p output", "Community support"],
     cta: "Get Started",
     href: APP_URL,
     highlighted: false,
@@ -137,7 +132,7 @@ export const HOW_IT_WORKS_STEPS = [
   {
     step: 3,
     title: "Download",
-    description: "Get your video instantly — ready to post anywhere",
+    description: "Get your video instantly - ready to post anywhere",
     icon: "Download",
   },
 ] as const;

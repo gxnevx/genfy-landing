@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${APP_NAME} — AI Video Generation`,
+    default: `${APP_NAME} - Produtos validados e vídeos para TikTok Shop`,
     template: `%s | ${APP_NAME}`,
   },
   description: APP_DESCRIPTION,
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: SITE_URL,
     siteName: APP_NAME,
-    title: `${APP_NAME} — AI Video Generation`,
+    title: `${APP_NAME} - Produtos validados e vídeos para TikTok Shop`,
     description: APP_DESCRIPTION,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: APP_NAME }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${APP_NAME} — AI Video Generation`,
+    title: `${APP_NAME} - Produtos validados e vídeos para TikTok Shop`,
     description: APP_DESCRIPTION,
     images: ["/og-image.png"],
   },
@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt" suppressHydrationWarning>
-      <body className="bg-bg text-tx font-sans">
+      <body className="bg-bg font-sans text-tx">
         <Providers>{children}</Providers>
         <Analytics />
       </body>
