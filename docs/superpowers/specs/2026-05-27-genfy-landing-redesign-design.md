@@ -14,13 +14,13 @@ Genfy is not only a video generator. It is a creator operating system for findin
 
 Primary audience: TikTok Shop creators and affiliates who want to make money by discovering products and publishing product videos faster.
 
-Secondary audience: early adopters evaluating whether Genfy feels serious enough to trust while it is still in beta.
+Secondary audience: creators evaluating whether Genfy feels serious enough to trust now that it is available.
 
 ## Positioning
 
 Use a confident but grounded message:
 
-- Genfy is a beta product with real traction.
+- Genfy is an available product with real traction.
 - Genfy was born in Brazil and is building a global category.
 - Genfy shortens the path from product discovery to monetizable content.
 - Genfy is preparing automatic TikTok Shop publishing, but the page must present it as coming soon.
@@ -36,7 +36,7 @@ Use these proof points visually, not as long copy:
 - 5,000+ generated videos.
 - 200+ active users.
 - 100,000+ analyzed products.
-- Private beta with real usage.
+- Available product with real usage.
 
 Do not invent GMV. Use economic framing without fake revenue numbers:
 
@@ -99,7 +99,7 @@ Hero visual:
 Hero proof:
 
 - Three compact metric chips: videos generated, active users, analyzed products.
-- Beta badge.
+- Availability badge.
 - CTA to open Genfy.
 
 ### 2. The Genfy Cycle
@@ -232,7 +232,7 @@ Visual:
 FAQ should stay short and practical:
 
 - What is Genfy?
-- Is it still beta?
+- Is it available now?
 - Does it guarantee money?
 - Does it post automatically today?
 - What does the TikTok integration do today?
@@ -317,7 +317,7 @@ Prefer:
 - "Ganhe dinheiro com videos IA para TikTok Shop."
 - "Produto. Score. Video. Publicacao."
 - "Cada video e uma nova tentativa de venda."
-- "Beta privado com tracao real."
+- "Produto disponivel com tracao real."
 - "Disponivel em breve."
 
 ## Validation
@@ -330,4 +330,3 @@ Before calling the redesign complete:
 - Check for overlapping text, horizontal scroll, broken mobile tabs, and unreadable mockups.
 - Verify reduced-motion styles do not leave content hidden.
 - Verify CTA links still point to the Genfy app.
-

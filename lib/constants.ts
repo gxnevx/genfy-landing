@@ -1,8 +1,8 @@
 export const SITE_URL = "https://home.genfy.studio";
-export const APP_URL = "https://genfy.studio";
+export const APP_URL = "https://genfy.studio/login";
 export const APP_NAME = "Genfy";
 export const APP_DESCRIPTION =
-  "Encontre produtos em alta, valide oportunidades e transforme contexto comercial em vídeos prontos para TikTok Shop.";
+  "Encontre produtos com potencial, valide a aposta e gere vídeos com IA para testar no TikTok Shop.";
 
 export const SOCIAL_LINKS = {
   instagram: "https://instagram.com/genfy.studio",
@@ -12,9 +12,11 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Results", href: "#results" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Product", href: "#product" },
+  { label: "Resultados", href: "#dlp-results" },
+  { label: "Como funciona", href: "#dlp-cycle" },
+  { label: "Recursos", href: "#dlp-features" },
+  { label: "Planos", href: "#dlp-plans" },
+  { label: "FAQ", href: "#dlp-brazil-faq" },
 ] as const;
 
 export const TOOL_ROUTES = [
@@ -39,8 +41,8 @@ export const FEATURES = [
   },
   {
     icon: "Zap",
-    label: "Multiple Engines",
-    description: "Choose from Sora, VEO 3.1, Grok Imagine, and more - each optimized for different styles.",
+    label: "Fast and Quality engines",
+    description: "Choose Fast or Quality for product-first TikTok Shop creative tests.",
     iconBg: "rgba(245,158,11,0.1)",
   },
   {
@@ -88,7 +90,7 @@ export const PRICING_PLANS = [
     description: "For creators who need more",
     features: [
       "100 tokens / month",
-      "All engines (Sora, VEO 3.1, Grok Imagine)",
+      "Fast and Quality engines",
       "1080p output",
       "Priority generation",
       "Auto captions",

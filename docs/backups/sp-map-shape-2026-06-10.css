@@ -1,0 +1,13 @@
+/*
+ * Backup da silhueta poligonal anterior do mapa de São Paulo.
+ * Para restaurar, substitua o clip-path de .dlp-brazil-map por este valor.
+ */
+
+.dlp-brazil-map {
+  clip-path: polygon(
+    42% 2%, 58% 5%, 72% 16%, 78% 31%, 92% 40%,
+    86% 56%, 78% 64%, 76% 82%, 62% 96%, 50% 87%,
+    42% 75%, 32% 79%, 21% 67%, 13% 50%, 4% 42%,
+    14% 27%, 26% 22%, 30% 10%
+  );
+}

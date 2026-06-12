@@ -25,15 +25,17 @@ export function CookieConsent() {
   };
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-50 animate-slide-up-sheet">
-      <div className="glass-card p-4">
-        <p className="text-tx2 text-xs leading-relaxed mb-3">
-          {t.cookie_message}{" "}
-          <a href="/privacy" className="text-ac hover:underline">{t.cookie_privacyLink}</a>.
-        </p>
-        <div className="flex gap-2">
-          <button onClick={() => handle(true)} className="btn-accent text-xs py-1.5 px-3 min-h-0 flex-1">{t.cookie_accept}</button>
-          <button onClick={() => handle(false)} className="btn-ghost text-xs py-1.5 px-3 flex-1">{t.cookie_decline}</button>
+    <div className="cookie-consent fixed left-3 right-3 z-50 animate-slide-up-sheet md:left-auto md:right-6 md:max-w-md" style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 12px)" }}>
+      <div className="cookie-consent-card glass-card p-3 md:p-4">
+        <div className="cookie-consent-content flex flex-col gap-3 md:block">
+          <p className="cookie-consent-text text-tx2 text-[11px] leading-relaxed md:mb-3 md:text-xs">
+            {t.cookie_message}{" "}
+            <a href="/privacy" className="text-ac hover:underline">{t.cookie_privacyLink}</a>.
+          </p>
+          <div className="cookie-consent-actions grid grid-cols-2 gap-2">
+            <button onClick={() => handle(true)} className="btn-accent min-h-9 text-[11px] md:min-h-10 md:text-xs">{t.cookie_accept}</button>
+            <button onClick={() => handle(false)} className="btn-ghost min-h-9 justify-center text-[11px] md:min-h-10 md:text-xs">{t.cookie_decline}</button>
+          </div>
         </div>
       </div>
     </div>

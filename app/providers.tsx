@@ -6,7 +6,7 @@ import { PostHogProvider } from "@/components/providers/PostHogProvider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+    <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
       <LangProvider>
         <PostHogProvider />
         {children}
