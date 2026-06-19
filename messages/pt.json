@@ -154,8 +154,12 @@
 
   "cookie_message": "Usamos cookies e ferramentas de analytics para melhorar sua experiência. Aceite para ativar analytics de produto, ou recuse para apenas cookies essenciais. Veja nossa",
   "cookie_privacyLink": "Política de Privacidade",
-  "cookie_accept": "Aceitar",
-  "cookie_decline": "Recusar",
+  "cookie_accept": "Aceitar tudo",
+  "cookie_decline": "Recusar opcionais",
+  "cookie_manage": "Gerenciar",
+  "cookie_save": "Salvar escolhas",
+  "cookie_analytics": "Analytics",
+  "cookie_marketing": "Marketing",
 
   "language": "Idioma",
   "privacy_title": "Política de Privacidade",

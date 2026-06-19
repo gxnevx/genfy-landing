@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Providers } from "./providers";
+import {
+  GoogleTagManagerHead,
+  GoogleTagManagerNoScript,
+} from "@/components/analytics/GoogleTagManager";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import { APP_NAME, APP_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -48,8 +53,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt" suppressHydrationWarning>
+      <head>
+        <GoogleTagManagerHead />
+      </head>
       <body className="bg-bg font-sans text-tx">
-        <Providers>{children}</Providers>
+        <GoogleTagManagerNoScript />
+        <Providers>
+          {children}
+          <CookieConsent />
+        </Providers>
         <Analytics />
       </body>
     </html>

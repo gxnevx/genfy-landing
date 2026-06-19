@@ -5,7 +5,10 @@ export const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.
 
 export function initPostHog() {
   if (typeof window === "undefined" || !POSTHOG_KEY) return;
-  if (posthog.__loaded) return;
+  if (posthog.__loaded) {
+    posthog.opt_in_capturing();
+    return;
+  }
 
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_HOST,
@@ -18,6 +21,7 @@ export function initPostHog() {
 export function shutdownPostHog() {
   if (posthog.__loaded) {
     posthog.opt_out_capturing();
+    posthog.reset();
   }
 }
 

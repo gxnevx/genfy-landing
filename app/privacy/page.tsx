@@ -9,12 +9,12 @@ function PrivacyEN() {
   return (
     <>
       <h1 className="text-3xl font-bold text-tx mb-8">Privacy Policy</h1>
-      <p className="text-tx2 text-sm mb-6">Last updated: March 2026</p>
+      <p className="text-tx2 text-sm mb-6">Last updated: June 2026</p>
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">1. Introduction</h2>
         <p className="text-tx2 text-sm leading-relaxed">
-          Genfy (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services at nexus.studio.
+          Genfy (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit home.genfy.studio or use the Genfy Studio application at genfy.studio.
         </p>
       </section>
 
@@ -25,7 +25,7 @@ function PrivacyEN() {
           <li><strong className="text-tx">Personal Data:</strong> Name, email address, and account information provided during registration.</li>
           <li><strong className="text-tx">Usage Data:</strong> Information about how you use our services, including video generation history.</li>
           <li><strong className="text-tx">Images:</strong> Product images you upload for video generation. These are processed and may be temporarily stored.</li>
-          <li><strong className="text-tx">Payment Data:</strong> Payment information is processed securely through our payment provider (AbacatePay) and is never stored on our servers.</li>
+          <li><strong className="text-tx">Payment Data:</strong> Payment details are processed securely by Stripe. Genfy stores transaction records such as package, amount, status, and provider reference, but does not store full card details.</li>
         </ul>
       </section>
 
@@ -50,20 +50,20 @@ function PrivacyEN() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">5. Third-Party Services</h2>
         <p className="text-tx2 text-sm leading-relaxed">
-          We use third-party AI services for video generation. Your product images may be processed by these services. We also use Google for authentication and AbacatePay for payment processing.
+          We use third-party AI services for video generation, Supabase for authentication and data infrastructure, Stripe for payments, Google for authentication and measurement, PostHog for product analytics, and Vercel for hosting and performance telemetry. Product assets may be processed by video generation providers only to deliver requested features.
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">6. Cookies & Analytics</h2>
         <p className="text-tx2 text-sm leading-relaxed mb-3">
-          We use essential cookies for authentication and preferences (theme, language). We do not use advertising cookies.
+          We use essential cookies for authentication, security, consent, attribution, and preferences. Optional analytics and marketing storage remain denied until you make a choice in our consent banner.
         </p>
         <p className="text-tx2 text-sm leading-relaxed mb-3">
-          <strong className="text-tx">Vercel Analytics:</strong> We use Vercel Analytics and Speed Insights to measure page performance. These tools are cookieless and do not collect personal data.
+          <strong className="text-tx">Google Tag Manager, Google Analytics, and Google Ads:</strong> With the relevant consent, these services help us understand visits, campaign attribution, account activation, and purchases. Advertising storage, advertising user data, and ad personalization are denied by default and enabled only with marketing consent.
         </p>
         <p className="text-tx2 text-sm leading-relaxed">
-          <strong className="text-tx">PostHog:</strong> If you accept cookies via our consent banner, we use PostHog for product analytics (click tracking, page views, and session data). If you decline, no PostHog data is collected. You can manage your preferences through our cookie consent banner.
+          <strong className="text-tx">PostHog and Vercel:</strong> PostHog is enabled only with analytics consent and helps us understand product usage. Vercel provides hosting and technical performance telemetry. You may reject optional storage or change your choice through the consent controls.
         </p>
       </section>
 
@@ -77,7 +77,7 @@ function PrivacyEN() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">8. Contact</h2>
         <p className="text-tx2 text-sm leading-relaxed">
-          For questions about this Privacy Policy, contact us through our social media channels or at the app support section.
+          For questions or privacy requests, contact genfy.studio@gmail.com or use the support section inside Genfy Studio.
         </p>
       </section>
     </>
@@ -88,12 +88,12 @@ function PrivacyPT() {
   return (
     <>
       <h1 className="text-3xl font-bold text-tx mb-8">Pol&iacute;tica de Privacidade</h1>
-      <p className="text-tx2 text-sm mb-6">&Uacute;ltima atualiza&ccedil;&atilde;o: Mar&ccedil;o de 2026</p>
+      <p className="text-tx2 text-sm mb-6">&Uacute;ltima atualiza&ccedil;&atilde;o: Junho de 2026</p>
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">1. Introdu&ccedil;&atilde;o</h2>
         <p className="text-tx2 text-sm leading-relaxed">
-          O Genfy (&quot;n&oacute;s&quot;, &quot;nosso&quot;) est&aacute; comprometido em proteger sua privacidade. Esta Pol&iacute;tica de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informa&ccedil;&otilde;es quando voc&ecirc; visita nosso site e utiliza nossos servi&ccedil;os em nexus.studio.
+          O Genfy (&quot;n&oacute;s&quot;, &quot;nosso&quot;) est&aacute; comprometido em proteger sua privacidade. Esta Pol&iacute;tica de Privacidade explica como coletamos, usamos, compartilhamos e protegemos informa&ccedil;&otilde;es quando voc&ecirc; visita home.genfy.studio ou usa o Genfy Studio em genfy.studio.
         </p>
       </section>
 
@@ -104,7 +104,7 @@ function PrivacyPT() {
           <li><strong className="text-tx">Dados Pessoais:</strong> Nome, endere&ccedil;o de e-mail e informa&ccedil;&otilde;es da conta fornecidas durante o cadastro.</li>
           <li><strong className="text-tx">Dados de Uso:</strong> Informa&ccedil;&otilde;es sobre como voc&ecirc; usa nossos servi&ccedil;os, incluindo hist&oacute;rico de gera&ccedil;&atilde;o de v&iacute;deos.</li>
           <li><strong className="text-tx">Imagens:</strong> Imagens de produtos enviadas para gera&ccedil;&atilde;o de v&iacute;deo. Estas s&atilde;o processadas e podem ser armazenadas temporariamente.</li>
-          <li><strong className="text-tx">Dados de Pagamento:</strong> Informa&ccedil;&otilde;es de pagamento s&atilde;o processadas com seguran&ccedil;a pelo nosso provedor (AbacatePay) e nunca s&atilde;o armazenadas em nossos servidores.</li>
+          <li><strong className="text-tx">Dados de Pagamento:</strong> Os dados de pagamento s&atilde;o processados com seguran&ccedil;a pela Stripe. O Genfy armazena registros da transa&ccedil;&atilde;o, como pacote, valor, status e refer&ecirc;ncia do provedor, mas n&atilde;o armazena os dados completos do cart&atilde;o.</li>
         </ul>
       </section>
 
@@ -129,20 +129,20 @@ function PrivacyPT() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">5. Servi&ccedil;os de Terceiros</h2>
         <p className="text-tx2 text-sm leading-relaxed">
-          Utilizamos servi&ccedil;os de IA de terceiros para gera&ccedil;&atilde;o de v&iacute;deos. Suas imagens de produtos podem ser processadas por esses servi&ccedil;os. Tamb&eacute;m usamos Google para autentica&ccedil;&atilde;o e AbacatePay para processamento de pagamentos.
+          Utilizamos servi&ccedil;os de IA de terceiros para gera&ccedil;&atilde;o de v&iacute;deos, Supabase para autentica&ccedil;&atilde;o e infraestrutura de dados, Stripe para pagamentos, Google para autentica&ccedil;&atilde;o e mensura&ccedil;&atilde;o, PostHog para analytics de produto e Vercel para hospedagem e telemetria de performance. Os ativos do produto podem ser processados pelos provedores de v&iacute;deo apenas para entregar as funcionalidades solicitadas.
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">6. Cookies & Analytics</h2>
         <p className="text-tx2 text-sm leading-relaxed mb-3">
-          Usamos cookies essenciais para autentica&ccedil;&atilde;o e prefer&ecirc;ncias (tema, idioma). N&atilde;o usamos cookies de publicidade.
+          Usamos cookies essenciais para autentica&ccedil;&atilde;o, seguran&ccedil;a, consentimento, atribui&ccedil;&atilde;o e prefer&ecirc;ncias. O armazenamento opcional de analytics e marketing permanece negado at&eacute; que voc&ecirc; escolha no banner de consentimento.
         </p>
         <p className="text-tx2 text-sm leading-relaxed mb-3">
-          <strong className="text-tx">Vercel Analytics:</strong> Usamos Vercel Analytics e Speed Insights para medir a performance das p&aacute;ginas. Essas ferramentas n&atilde;o usam cookies e n&atilde;o coletam dados pessoais.
+          <strong className="text-tx">Google Tag Manager, Google Analytics e Google Ads:</strong> Com o consentimento correspondente, esses servi&ccedil;os nos ajudam a entender visitas, atribui&ccedil;&atilde;o de campanhas, ativa&ccedil;&atilde;o de contas e compras. O armazenamento de publicidade, os dados de usu&aacute;rio para publicidade e a personaliza&ccedil;&atilde;o de an&uacute;ncios ficam negados por padr&atilde;o e s&oacute; s&atilde;o ativados com consentimento de marketing.
         </p>
         <p className="text-tx2 text-sm leading-relaxed">
-          <strong className="text-tx">PostHog:</strong> Se voc&ecirc; aceitar cookies pelo nosso banner de consentimento, usamos PostHog para analytics de produto (rastreamento de cliques, visualiza&ccedil;&otilde;es de p&aacute;gina e dados de sess&atilde;o). Se voc&ecirc; recusar, nenhum dado do PostHog &eacute; coletado. Voc&ecirc; pode gerenciar suas prefer&ecirc;ncias atrav&eacute;s do nosso banner de consentimento.
+          <strong className="text-tx">PostHog e Vercel:</strong> O PostHog &eacute; ativado somente com consentimento de analytics e nos ajuda a entender o uso do produto. A Vercel fornece hospedagem e telemetria t&eacute;cnica de performance. Voc&ecirc; pode recusar o armazenamento opcional ou alterar sua escolha pelos controles de consentimento.
         </p>
       </section>
 
@@ -156,7 +156,7 @@ function PrivacyPT() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold text-tx mb-3">8. Contato</h2>
         <p className="text-tx2 text-sm leading-relaxed">
-          Para d&uacute;vidas sobre esta Pol&iacute;tica de Privacidade, entre em contato atrav&eacute;s de nossas redes sociais ou pela se&ccedil;&atilde;o de suporte do aplicativo.
+          Para d&uacute;vidas ou solicita&ccedil;&otilde;es de privacidade, entre em contato pelo e-mail genfy.studio@gmail.com ou pela se&ccedil;&atilde;o de suporte do Genfy Studio.
         </p>
       </section>
     </>

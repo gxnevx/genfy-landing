@@ -154,8 +154,12 @@
 
   "cookie_message": "We use cookies and analytics tools to improve your experience. Accept to enable product analytics, or decline for essential cookies only. See our",
   "cookie_privacyLink": "Privacy Policy",
-  "cookie_accept": "Accept",
-  "cookie_decline": "Decline",
+  "cookie_accept": "Accept all",
+  "cookie_decline": "Reject optional",
+  "cookie_manage": "Manage",
+  "cookie_save": "Save choices",
+  "cookie_analytics": "Analytics",
+  "cookie_marketing": "Marketing",
 
   "language": "Language",
   "privacy_title": "Privacy Policy",

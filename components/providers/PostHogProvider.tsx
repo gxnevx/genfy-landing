@@ -2,30 +2,31 @@
 
 import { useEffect } from "react";
 import { initPostHog, shutdownPostHog, POSTHOG_KEY } from "@/lib/posthog";
-
-const COOKIE_KEY = "genfy-cookie-consent";
+import {
+  CONSENT_CHANGED_EVENT,
+  getStoredConsent,
+} from "@/lib/analytics/consent";
+import type { ConsentPreferences } from "@/lib/analytics/types";
 
 export function PostHogProvider() {
   useEffect(() => {
     if (!POSTHOG_KEY) return;
 
-    const consent = localStorage.getItem(COOKIE_KEY);
-    if (consent === "accepted") {
+    if (getStoredConsent().analytics) {
       initPostHog();
     }
 
-    // Listen for consent changes (dispatched by CookieConsent)
     const onConsent = (e: Event) => {
-      const { accepted } = (e as CustomEvent<{ accepted: boolean }>).detail;
-      if (accepted) {
+      const preferences = (e as CustomEvent<ConsentPreferences>).detail;
+      if (preferences.analytics) {
         initPostHog();
       } else {
         shutdownPostHog();
       }
     };
 
-    window.addEventListener("cookie-consent", onConsent);
-    return () => window.removeEventListener("cookie-consent", onConsent);
+    window.addEventListener(CONSENT_CHANGED_EVENT, onConsent);
+    return () => window.removeEventListener(CONSENT_CHANGED_EVENT, onConsent);
   }, []);
 
   return null;
