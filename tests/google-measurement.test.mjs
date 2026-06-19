@@ -87,16 +87,31 @@ test("browser events remain visible in dataLayer and are sent through gtag", () 
   const calls = [];
   globalThis.window = {
     dataLayer: [],
-    gtag: (...args) => calls.push(args),
+    gtag: (...args) => {
+      calls.push(args);
+      globalThis.window.dataLayer.push(args);
+    },
   };
 
   pushAnalyticsEvent("tool_explored", { tool: "product-validation" });
 
   assert.deepEqual(globalThis.window.dataLayer, [
-    { event: "tool_explored", tool: "product-validation" },
+    ["event", "tool_explored", { tool: "product-validation" }],
   ]);
   assert.deepEqual(calls, [
     ["event", "tool_explored", { tool: "product-validation" }],
+  ]);
+
+  delete globalThis.window;
+});
+
+test("browser events use an object dataLayer fallback before gtag exists", () => {
+  globalThis.window = { dataLayer: [] };
+
+  pushAnalyticsEvent("tool_explored", { tool: "trending-products" });
+
+  assert.deepEqual(globalThis.window.dataLayer, [
+    { event: "tool_explored", tool: "trending-products" },
   ]);
 
   delete globalThis.window;

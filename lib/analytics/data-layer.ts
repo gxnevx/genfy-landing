@@ -12,7 +12,12 @@ export function pushAnalyticsEvent<Name extends keyof AnalyticsEventMap>(
   parameters: AnalyticsEventMap[Name],
 ) {
   if (typeof window === "undefined") return;
+
+  if (window.gtag) {
+    window.gtag("event", event, parameters);
+    return;
+  }
+
   window.dataLayer = window.dataLayer ?? [];
   window.dataLayer.push(createAnalyticsEvent(event, parameters));
-  window.gtag?.("event", event, parameters);
 }
