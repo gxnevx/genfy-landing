@@ -122,14 +122,14 @@ const copy = {
 
 const aiVideoHeroCopy = {
   pt: {
-    heroChip: "Gerador de vídeo com IA · Produto · Criativo",
+    heroChip: "Gerador de vídeo com IA",
     heroTitle: ["Gerador de", "vídeo com IA.", "Produto vira", "criativo."],
     heroLede:
       "Cole o link ou use uma imagem do produto para gerar vídeos com IA usando Veo 3.1 ou Seedance 2.0 — sem gravar e sem editar.",
     heroCta: "Criar vídeo com IA",
   },
   en: {
-    heroChip: "AI video generator · Product · Creative",
+    heroChip: "AI video generator",
     heroTitle: ["Generate AI", "product videos.", "From link to", "creative."],
     heroLede:
       "Paste a product link or use an image to generate AI videos with Veo 3.1 or Seedance 2.0 — no filming or editing.",
