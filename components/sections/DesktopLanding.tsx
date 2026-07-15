@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight, Check, MapPin, Play, Sparkles } from "lucide-
 import { APP_URL } from "@/lib/constants";
 import { useLang } from "@/contexts/LangContext";
 import { faqItems, landingMetrics, landingPillars, plans, resultVideos } from "@/data/landing";
+import type { LandingVariant } from "@/components/sections/landing-types";
 
 /** Count up animation hook — counts from 0 to target when element enters view */
 function useCountUp(target: number, duration = 1400) {
@@ -226,9 +227,30 @@ const copy = {
   },
 } as const;
 
-export function DesktopLanding() {
+const aiVideoHeroCopy = {
+  pt: {
+    heroSideLeft: "link → vídeo com IA",
+    heroChip: "Gerador de vídeo com IA · Produto · Criativo",
+    heroTitle: ["Gerador de", "vídeo com IA.", "Produto vira", "criativo."],
+    heroLede:
+      "Cole o link ou use uma imagem do produto para gerar vídeos com IA usando Veo 3.1 ou Seedance 2.0 — sem gravar e sem editar.",
+    heroCtaPrimary: "Criar vídeo com IA",
+    heroCtaGhost: "Ver vídeos gerados",
+  },
+  en: {
+    heroSideLeft: "link → AI video",
+    heroChip: "AI video generator · Product · Creative",
+    heroTitle: ["Generate AI", "product videos.", "From link to", "creative."],
+    heroLede:
+      "Paste a product link or use an image to generate AI videos with Veo 3.1 or Seedance 2.0 — no filming or editing.",
+    heroCtaPrimary: "Create an AI video",
+    heroCtaGhost: "See generated videos",
+  },
+} as const;
+
+export function DesktopLanding({ variant = "default" }: { variant?: LandingVariant }) {
   const { lang } = useLang();
-  const c = copy[lang];
+  const c = variant === "ai-video" ? { ...copy[lang], ...aiVideoHeroCopy[lang] } : copy[lang];
   const pt = lang === "pt";
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const [activeEngine, setActiveEngine] = useState<"veo" | "seedance">("seedance");

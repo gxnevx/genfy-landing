@@ -1,5 +1,6 @@
 import { MobileLanding } from "@/components/sections/MobileLanding";
 import { DesktopLanding } from "@/components/sections/DesktopLanding";
+import type { LandingVariant } from "@/components/sections/landing-types";
 
 /**
  * Single entry point for the landing page.
@@ -16,14 +17,14 @@ import { DesktopLanding } from "@/components/sections/DesktopLanding";
  * imported elsewhere (legal pages, tools, etc.) but home only uses these
  * two.
  */
-export function VisualLanding() {
+export function VisualLanding({ variant = "default" }: { variant?: LandingVariant }) {
   return (
     <>
       <div className="md:hidden">
-        <MobileLanding />
+        <MobileLanding variant={variant} />
       </div>
       <div className="hidden md:block">
-        <DesktopLanding />
+        <DesktopLanding variant={variant} />
       </div>
     </>
   );

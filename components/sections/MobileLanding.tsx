@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight, Check, Sparkles } from "lucide-react";
 import { APP_URL } from "@/lib/constants";
 import { useLang } from "@/contexts/LangContext";
 import { landingMetrics, plans, resultVideos } from "@/data/landing";
+import type { LandingVariant } from "@/components/sections/landing-types";
 
 /**
  * MobileLanding — bilingual (PT default / EN via LangToggle).
@@ -119,9 +120,26 @@ const copy = {
   },
 } as const;
 
-export function MobileLanding() {
+const aiVideoHeroCopy = {
+  pt: {
+    heroChip: "Gerador de vídeo com IA · Produto · Criativo",
+    heroTitle: ["Gerador de", "vídeo com IA.", "Produto vira", "criativo."],
+    heroLede:
+      "Cole o link ou use uma imagem do produto para gerar vídeos com IA usando Veo 3.1 ou Seedance 2.0 — sem gravar e sem editar.",
+    heroCta: "Criar vídeo com IA",
+  },
+  en: {
+    heroChip: "AI video generator · Product · Creative",
+    heroTitle: ["Generate AI", "product videos.", "From link to", "creative."],
+    heroLede:
+      "Paste a product link or use an image to generate AI videos with Veo 3.1 or Seedance 2.0 — no filming or editing.",
+    heroCta: "Create an AI video",
+  },
+} as const;
+
+export function MobileLanding({ variant = "default" }: { variant?: LandingVariant }) {
   const { lang } = useLang();
-  const c = copy[lang];
+  const c = variant === "ai-video" ? { ...copy[lang], ...aiVideoHeroCopy[lang] } : copy[lang];
   const pt = lang === "pt";
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const [activeEngine, setActiveEngine] = useState<"veo" | "seedance">("seedance");
