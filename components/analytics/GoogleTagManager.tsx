@@ -11,6 +11,11 @@ gtag('consent', 'default', {
   ad_personalization: 'denied',
   wait_for_update: 500
 });
+gtag('set', 'url_passthrough', true);
+gtag('set', 'linker', {
+  domains: ['home.genfy.studio', 'genfy.studio'],
+  accept_incoming: true
+});
 try {
   var consentMatch = document.cookie.match(/(?:^|; )genfy_consent_v2=([^;]*)/);
   var savedConsent = consentMatch ? decodeURIComponent(consentMatch[1]) : null;

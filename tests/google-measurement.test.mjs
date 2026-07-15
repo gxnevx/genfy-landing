@@ -13,6 +13,7 @@ import {
   createAnalyticsEvent,
   pushAnalyticsEvent,
 } from "../lib/analytics/data-layer.ts";
+import { readFile } from "node:fs/promises";
 
 test("optional Google storage is denied before the visitor chooses", () => {
   assert.equal(CONSENT_STORAGE_KEY, "genfy_consent_v2");
@@ -42,6 +43,23 @@ test("production consent cookie is shared by the landing page and Studio", () =>
   assert.match(cookie, /Domain=\.genfy\.studio/);
   assert.match(cookie, /SameSite=Lax/);
   assert.match(cookie, /Secure/);
+});
+
+test("Google measurement links the landing page and Studio before GTM loads", async () => {
+  const source = await readFile(
+    new URL("../components/analytics/GoogleTagManager.tsx", import.meta.url),
+    "utf8",
+  );
+
+  const linker = source.indexOf("gtag('set', 'linker'");
+  const gtmLoader = source.indexOf("https://www.googletagmanager.com/gtm.js");
+
+  assert.ok(linker >= 0);
+  assert.ok(gtmLoader > linker);
+  assert.match(source, /home\.genfy\.studio/);
+  assert.match(source, /genfy\.studio/);
+  assert.match(source, /accept_incoming:\s*true/);
+  assert.match(source, /url_passthrough/);
 });
 
 test("campaign attribution preserves first touch and refreshes last touch", () => {
