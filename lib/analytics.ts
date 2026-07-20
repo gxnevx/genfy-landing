@@ -2,7 +2,13 @@ import { posthog } from "./posthog";
 import { pushAnalyticsEvent } from "./analytics/data-layer";
 import { APP_URL } from "./constants";
 
-type CtaLocation = "hero" | "final_cta" | "navbar" | "footer";
+type CtaLocation =
+  | "hero"
+  | "workflow"
+  | "pricing"
+  | "final_cta"
+  | "navbar"
+  | "footer";
 type ToolName = "trending-products" | "trending-sellers" | "product-validation";
 type Lang = "pt" | "en";
 

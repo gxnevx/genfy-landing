@@ -65,8 +65,6 @@ export function Navbar() {
           <LangToggle />
           <a
             href={APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-accent hidden min-h-0 px-4 py-2 text-[13px] md:inline-flex"
             onClick={() => trackGetStarted("navbar")}
           >
@@ -98,8 +96,6 @@ export function Navbar() {
             <div className="accent-line my-1" />
             <a
               href={APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="btn-accent text-center text-[13px]"
               onClick={() => trackGetStarted("navbar")}
             >

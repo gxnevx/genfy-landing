@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, Check, Sparkles } from "lucide-react";
 import { APP_URL } from "@/lib/constants";
+import { trackGetStarted, trackHeroCta } from "@/lib/analytics";
 import { useLang } from "@/contexts/LangContext";
 import { landingMetrics, plans, resultVideos } from "@/data/landing";
 import type { LandingVariant } from "@/components/sections/landing-types";
@@ -197,7 +198,11 @@ export function MobileLanding({ variant = "default" }: { variant?: LandingVarian
         </h1>
         <p className="mlp-lede">{c.heroLede}</p>
 
-        <a className="mlp-cta" href={APP_URL} target="_blank" rel="noopener noreferrer">
+        <a
+          className="mlp-cta"
+          href={APP_URL}
+          onClick={() => trackHeroCta("start_creating_free")}
+        >
           {c.heroCta}
           <ArrowRight size={17} />
         </a>
@@ -405,8 +410,7 @@ export function MobileLanding({ variant = "default" }: { variant?: LandingVarian
                 <a
                   className={`gx-plan-cta ${plan.featured ? "gx-plan-cta-solid" : "gx-plan-cta-ghost"}`}
                   href={APP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => trackGetStarted("pricing")}
                 >
                   {pt ? plan.ctaPt : plan.ctaEn}
                   <ArrowRight size={15} />
@@ -435,7 +439,11 @@ export function MobileLanding({ variant = "default" }: { variant?: LandingVarian
           <em>{c.closingTitle[1]}</em>
         </h2>
         <p className="mlp-lede">{c.closingLede}</p>
-        <a className="mlp-cta" href={APP_URL} target="_blank" rel="noopener noreferrer">
+        <a
+          className="mlp-cta"
+          href={APP_URL}
+          onClick={() => trackGetStarted("final_cta")}
+        >
           {c.closingCta}
           <ArrowRight size={17} />
         </a>

@@ -1,5 +1,5 @@
 export const SITE_URL = "https://home.genfy.studio";
-export const APP_URL = "https://genfy.studio/login";
+export const APP_URL = "https://genfy.studio/login?mode=signup";
 export const APP_NAME = "Genfy";
 export const APP_DESCRIPTION =
   "Encontre produtos com potencial, valide a aposta e gere vídeos com IA para testar no TikTok Shop.";

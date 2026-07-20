@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, Check, MapPin, Play, Sparkles } from "lucide-react";
 import { APP_URL } from "@/lib/constants";
+import { trackGetStarted, trackHeroCta } from "@/lib/analytics";
 import { useLang } from "@/contexts/LangContext";
 import { faqItems, landingMetrics, landingPillars, plans, resultVideos } from "@/data/landing";
 import type { LandingVariant } from "@/components/sections/landing-types";
@@ -327,7 +328,11 @@ export function DesktopLanding({ variant = "default" }: { variant?: LandingVaria
 
             <div className="dlp-hero-actions">
               <div className="dlp-hero-cta-stack">
-                <a className="dlp-cta" href={APP_URL} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="dlp-cta"
+                  href={APP_URL}
+                  onClick={() => trackHeroCta("start_creating_free")}
+                >
                   {c.heroCtaPrimary}
                   <ArrowRight size={18} />
                 </a>
@@ -488,7 +493,11 @@ export function DesktopLanding({ variant = "default" }: { variant?: LandingVaria
             </ol>
           </div>
 
-          <a className="dlp-cycle-cta" href={APP_URL} target="_blank" rel="noopener noreferrer">
+          <a
+            className="dlp-cycle-cta"
+            href={APP_URL}
+            onClick={() => trackGetStarted("workflow")}
+          >
             {c.cycleCta}
             <ArrowRight size={18} />
           </a>
@@ -679,8 +688,7 @@ export function DesktopLanding({ variant = "default" }: { variant?: LandingVaria
                 <a
                   className={`gx-plan-cta ${plan.featured ? "gx-plan-cta-solid" : "gx-plan-cta-ghost"}`}
                   href={APP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => trackGetStarted("pricing")}
                 >
                   {pt ? plan.ctaPt : plan.ctaEn}
                   <ArrowRight size={15} />
@@ -783,7 +791,11 @@ export function DesktopLanding({ variant = "default" }: { variant?: LandingVaria
           </h2>
         </div>
         <p className="dlp-lede dlp-lede-center">{c.closingLede}</p>
-        <a className="dlp-cta dlp-cta-center" href={APP_URL} target="_blank" rel="noopener noreferrer">
+        <a
+          className="dlp-cta dlp-cta-center"
+          href={APP_URL}
+          onClick={() => trackGetStarted("final_cta")}
+        >
           {c.closingCta}
           <ArrowRight size={18} />
         </a>

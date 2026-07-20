@@ -9,6 +9,7 @@ import {
   toGoogleConsent,
 } from "../lib/analytics/consent.ts";
 import { captureAttribution } from "../lib/analytics/attribution.ts";
+import { APP_URL } from "../lib/constants.ts";
 import {
   createAnalyticsEvent,
   pushAnalyticsEvent,
@@ -90,15 +91,19 @@ test("CTA event contains only the approved measurement fields", () => {
     createAnalyticsEvent("cta_click", {
       cta_name: "start_creating_free",
       cta_location: "hero",
-      destination: "https://genfy.studio/login",
+      destination: "https://genfy.studio/login?mode=signup",
     }),
     {
       event: "cta_click",
       cta_name: "start_creating_free",
       cta_location: "hero",
-      destination: "https://genfy.studio/login",
+      destination: "https://genfy.studio/login?mode=signup",
     },
   );
+});
+
+test("acquisition CTAs open the Studio directly in signup mode", () => {
+  assert.equal(APP_URL, "https://genfy.studio/login?mode=signup");
 });
 
 test("browser events remain visible in dataLayer and are sent through gtag", () => {
