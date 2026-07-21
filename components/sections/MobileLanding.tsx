@@ -214,6 +214,7 @@ export function MobileLanding({ variant = "default" }: { variant?: LandingVarian
               videoRefs.current[0] = node;
             }}
             src="/landing/videos/seedance-1.mp4"
+            poster="/landing/posters/seedance-1.webp"
             autoPlay
             muted
             loop

@@ -20,6 +20,12 @@ import type { LandingVariant } from "@/components/sections/landing-types";
 export function VisualLanding({ variant = "default" }: { variant?: LandingVariant }) {
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href="/landing/posters/seedance-1.webp"
+        fetchPriority="high"
+      />
       <div className="md:hidden">
         <MobileLanding variant={variant} />
       </div>
