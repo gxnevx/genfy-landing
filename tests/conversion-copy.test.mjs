@@ -10,19 +10,22 @@ test("landing uses specific conversion copy instead of generic CTAs", async () =
   ]);
 
   for (const component of [desktop, mobile]) {
-    assert.match(component, /Gerar meu primeiro vídeo/);
+    assert.match(component, /Criar conta grátis/);
+    assert.match(component, /Vídeos a partir de R\$ 4,90/);
     assert.match(component, /Me avisar no WhatsApp/);
-    assert.match(component, /Criar meu primeiro vídeo/);
-    assert.match(component, /pronto para viralizar/);
-    assert.match(component, /Prepare o próximo viral/);
+    assert.match(component, /pronto para publicar/);
+    assert.match(component, /Prepare o próximo criativo/);
     assert.doesNotMatch(component, /Quero testar agora|Fique por dentro no WhatsApp|Bora gerar o primeiro/);
   }
 
-  assert.match(desktop, /Transforme(?:&nbsp;|\u00a0)em/);
-  assert.match(desktop, /vídeo(?:&nbsp;|\u00a0)viral/);
-  assert.match(mobile, /Transforme em/);
-  assert.match(mobile, /vídeo viral/);
+  assert.match(desktop, /Transforme foto/);
+  assert.match(desktop, /em vídeo com IA/);
+  assert.match(mobile, /Transforme foto/);
+  assert.match(mobile, /em vídeo com IA/);
 
+  assert.doesNotMatch(data, /Vídeos IA gerados|Criadores ativos|Produtos rastreados/);
+  assert.match(data, /Foto ou link/);
+  assert.match(data, /R\$ 4,90/);
   assert.match(data, /Explorar o Genfy grátis/);
   assert.match(data, /Gerar com 500 tokens/);
   assert.match(data, /Escolher pacote Pro/);

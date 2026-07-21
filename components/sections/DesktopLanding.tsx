@@ -8,60 +8,10 @@ import { useLang } from "@/contexts/LangContext";
 import { faqItems, landingMetrics, landingPillars, plans, resultVideos } from "@/data/landing";
 import type { LandingVariant } from "@/components/sections/landing-types";
 
-/** Count up animation hook — counts from 0 to target when element enters view */
-function useCountUp(target: number, duration = 1400) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLElement | null>(null);
-  const startedRef = useRef(false);
-
-  useEffect(() => {
-    if (!ref.current || typeof IntersectionObserver === "undefined") {
-      setCount(target);
-      return;
-    }
-    const node = ref.current;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting) && !startedRef.current) {
-          startedRef.current = true;
-          const start = performance.now();
-          const step = (now: number) => {
-            const p = Math.min(1, (now - start) / duration);
-            const eased = 1 - Math.pow(1 - p, 3);
-            setCount(Math.round(target * eased));
-            if (p < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-        }
-      },
-      { threshold: 0.4 },
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, [target, duration]);
-
-  return { count, ref };
-}
-
-/** Format big number with K/M suffix preserving the original style. */
-function formatMetric(value: string, count: number): string {
-  if (value.includes("K")) return `${Math.round(count / 1000)}K+`;
-  if (value.includes("k")) return `${(count / 1000).toFixed(1)}k+`;
-  return `${count}+`;
-}
-
-function ParseMetricTarget(value: string): number {
-  const num = parseFloat(value.replace(/[^\d.]/g, ""));
-  if (value.includes("K") || value.includes("k")) return num * 1000;
-  return num;
-}
-
 function HeroNumber({ metric, label }: { metric: (typeof landingMetrics)[number]; label: string }) {
-  const target = ParseMetricTarget(metric.value);
-  const { count, ref } = useCountUp(target);
   return (
-    <article ref={ref as React.RefObject<HTMLElement>}>
-      <strong>{formatMetric(metric.value, count)}</strong>
+    <article>
+      <strong>{metric.value}</strong>
       <span>{label}</span>
     </article>
   );
@@ -111,13 +61,13 @@ const copy = {
   pt: {
     heroSideLeft: "produto → score → vídeo",
     heroSideRight: "São Paulo · 23.5505° S",
-    heroChip: "Produto bom · Vídeo viral · TikTok Shop",
-    heroTitle: ["Produto bom", "não espera.", "Transforme em", "vídeo viral."],
+    heroChip: "Foto ou link · Vídeo 9:16 · TikTok Shop",
+    heroTitle: ["Crie vídeos", "de produto.", "Sem gravar.", "Sem editar."],
     heroLede:
-      "Encontre a oportunidade, valide o potencial e transforme o link em um vídeo feito para prender atenção no TikTok Shop.",
-    heroCtaPrimary: "Gerar meu primeiro vídeo",
-    heroCtaAside: "Grátis para começar · Sem cartão",
-    heroCtaGhost: "Ver vídeos do Genfy",
+      "Envie uma foto ou cole o link do produto. O Genfy gera um vídeo vertical com IA pronto para testar no TikTok Shop.",
+    heroCtaPrimary: "Criar conta grátis",
+    heroCtaAside: "Sem cartão · Vídeos a partir de R$ 4,90",
+    heroCtaGhost: "Ver exemplos reais",
     heroArtTop: "Genfy output · vertical",
     heroArtBottom: "gerado no Genfy",
     resultsEyebrow: "Gerados no Genfy",
@@ -125,11 +75,11 @@ const copy = {
     resultsLede:
       "Cenas com movimento, contexto e linguagem de TikTok Shop. Tudo gerado no Genfy, sem gravar e sem editar.",
     cycleKicker: "Uma tarde. Um produto no ar.",
-    cycleTitle: ["Do link ao vídeo ", "pronto para viralizar."],
+    cycleTitle: ["Do link ao vídeo ", "pronto para publicar."],
     cycleLede:
       "O Genfy mantém pesquisa, decisão e criação no mesmo fluxo para você publicar enquanto a oportunidade ainda está quente.",
     cycleSignalProduct: "Produto encontrado",
-    cycleSignalProductValue: "+38% em vendas",
+    cycleSignalProductValue: "Sinal validado",
     cyclePhonePlay: "Criativo pronto",
     cyclePhonePublish: "Publicar rascunho",
     cycleScore: "Score Genfy",
@@ -139,7 +89,7 @@ const copy = {
     featuresLede:
       "Cole um link, escolha o produto com mais potencial, gere o criativo e siga para rascunho. O fluxo fica curto pra você publicar mais ideias no mesmo dia.",
     enginesEyebrow: "Motores de vídeo",
-    enginesTitle: ["Escolha o motor. ", "Prepare o próximo viral."],
+    enginesTitle: ["Escolha o motor. ", "Prepare o próximo criativo."],
     engineAvailable: "Disponível agora",
     engineVeoDesc: "Realismo, áudio e cenas que parecem filmadas.",
     engineSeedanceDesc: "Movimento, ritmo e produto ganhando vida.",
@@ -161,11 +111,11 @@ const copy = {
     brazilArtTitle: "Nascida no Brasil.",
     brazilArtText: "Construindo a categoria de IA para TikTok Shop.",
     closingEyebrow: "Feito no Brasil",
-    closingTitle: ["Seu próximo viral ", "começa com um link."],
+    closingTitle: ["Seu próximo vídeo ", "começa com uma foto ou link."],
     closingLede:
       "Produto, score e vídeo no mesmo fluxo. Pra competir com quem está mais acima na esteira sem perder o dia editando.",
-    closingCta: "Criar meu primeiro vídeo",
-    closingAside: "Grátis para começar · Sem cartão",
+    closingCta: "Criar conta grátis",
+    closingAside: "Sem cartão · Vídeos a partir de R$ 4,90",
   },
   en: {
     heroSideLeft: "product → score → video",
@@ -230,13 +180,13 @@ const copy = {
 
 const aiVideoHeroCopy = {
   pt: {
-    heroSideLeft: "link → vídeo com IA",
-    heroChip: "Gerador de vídeo com IA · Produto · Criativo",
-    heroTitle: ["Gerador de", "vídeo com IA.", "Produto vira", "criativo."],
+    heroSideLeft: "foto ou link → vídeo 9:16",
+    heroChip: "Foto para vídeo IA · Produto · Anúncio",
+    heroTitle: ["Transforme foto", "em vídeo com IA.", "Pronto para", "produto e anúncio."],
     heroLede:
-      "Cole o link ou use uma imagem do produto para gerar vídeos com IA usando Veo 3.1 ou Seedance 2.0 — sem gravar e sem editar.",
-    heroCtaPrimary: "Criar vídeo com IA",
-    heroCtaGhost: "Ver vídeos gerados",
+      "Envie uma foto ou cole o link do produto. Gere um vídeo vertical com Veo 3.1 ou Seedance 2.0 — sem câmera e sem editar.",
+    heroCtaPrimary: "Criar conta grátis",
+    heroCtaGhost: "Ver exemplos reais",
   },
   en: {
     heroSideLeft: "link → AI video",

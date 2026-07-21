@@ -48,18 +48,18 @@ const steps = [
 
 const copy = {
   pt: {
-    heroChip: "Produto bom · Vídeo viral · TikTok Shop",
-    heroTitle: ["Produto bom", "não espera.", "Transforme em", "vídeo viral."],
+    heroChip: "Foto ou link · Vídeo 9:16 · TikTok Shop",
+    heroTitle: ["Crie vídeos", "de produto.", "Sem gravar.", "Sem editar."],
     heroLede:
-      "Encontre a oportunidade, valide o potencial e transforme o link em um vídeo feito para prender atenção no TikTok Shop.",
-    heroCta: "Gerar meu primeiro vídeo",
-    heroAside: "Grátis para começar · Sem cartão",
+      "Envie uma foto ou cole o link do produto. O Genfy gera um vídeo vertical com IA pronto para testar no TikTok Shop.",
+    heroCta: "Criar conta grátis",
+    heroAside: "Sem cartão · Vídeos a partir de R$ 4,90",
     resultsEyebrow: "Saiu do Genfy",
     resultsTitle: ["Veja o produto ganhar ", "cara de anúncio."],
     cycleEyebrow: "O ciclo",
-    cycleTitle: ["Do link ao vídeo ", "pronto para viralizar."],
+    cycleTitle: ["Do link ao vídeo ", "pronto para publicar."],
     enginesEyebrow: "Motores de vídeo",
-    enginesTitle: ["Escolha o motor. ", "Prepare o próximo viral."],
+    enginesTitle: ["Escolha o motor. ", "Prepare o próximo criativo."],
     engineAvailable: "Disponível agora",
     engineVeoDesc: "Realismo, áudio e cenas que parecem filmadas.",
     engineSeedanceDesc: "Movimento, ritmo e produto ganhando vida.",
@@ -77,11 +77,11 @@ const copy = {
     plansTitle: ["Compre tokens. ", "Gere sem assinatura."],
     plansNote: "Precisa de mais de 50.000 tokens? Fale com a gente sobre o pacote Business.",
     closingEyebrow: "Feito no Brasil",
-    closingTitle: ["Seu próximo viral ", "começa com um link."],
+    closingTitle: ["Seu próximo vídeo ", "começa com uma foto ou link."],
     closingLede:
       "Produto, score e vídeo no mesmo fluxo. Pra competir com quem está mais acima na esteira sem perder o dia editando.",
-    closingCta: "Criar meu primeiro vídeo",
-    closingAside: "Grátis para começar · Sem cartão",
+    closingCta: "Criar conta grátis",
+    closingAside: "Sem cartão · Vídeos a partir de R$ 4,90",
   },
   en: {
     heroChip: "Good product · Viral video · TikTok Shop",
@@ -123,11 +123,11 @@ const copy = {
 
 const aiVideoHeroCopy = {
   pt: {
-    heroChip: "Gerador de vídeo com IA",
-    heroTitle: ["Gerador de", "vídeo com IA.", "Produto vira", "criativo."],
+    heroChip: "Foto para vídeo IA · Produto · Anúncio",
+    heroTitle: ["Transforme foto", "em vídeo com IA.", "Pronto para", "produto e anúncio."],
     heroLede:
-      "Cole o link ou use uma imagem do produto para gerar vídeos com IA usando Veo 3.1 ou Seedance 2.0 — sem gravar e sem editar.",
-    heroCta: "Criar vídeo com IA",
+      "Envie uma foto ou cole o link do produto. Gere um vídeo vertical com Veo 3.1 ou Seedance 2.0 — sem câmera e sem editar.",
+    heroCta: "Criar conta grátis",
   },
   en: {
     heroChip: "AI video generator",

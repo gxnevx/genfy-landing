@@ -6,10 +6,10 @@ import { APP_NAME, SITE_URL } from "@/lib/constants";
 
 const pageUrl = `${SITE_URL}/gerador-video-ia`;
 const description =
-  "Gerador de vídeo com IA para transformar links e imagens de produtos em criativos com Veo 3.1 ou Seedance 2.0, sem gravar e sem editar.";
+  "Transforme uma foto ou link de produto em vídeo vertical 9:16 com IA usando Veo 3.1 ou Seedance 2.0, sem câmera e sem editar.";
 
 export const metadata: Metadata = {
-  title: "Gerador de Vídeo com IA para Produtos",
+  title: "Foto para Vídeo com IA para Produtos",
   description,
   alternates: { canonical: pageUrl },
   openGraph: {
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: pageUrl,
     siteName: APP_NAME,
-    title: "Gerador de Vídeo com IA para Produtos | Genfy",
+    title: "Foto para Vídeo com IA para Produtos | Genfy",
     description,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: APP_NAME }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gerador de Vídeo com IA para Produtos | Genfy",
+    title: "Foto para Vídeo com IA para Produtos | Genfy",
     description,
     images: ["/og-image.png"],
   },

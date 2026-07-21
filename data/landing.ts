@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const landingMetrics = [
-  { value: "5K+", labelPt: "Vídeos IA gerados", labelEn: "Videos generated" },
-  { value: "200+", labelPt: "Criadores ativos", labelEn: "Active users" },
-  { value: "100K+", labelPt: "Produtos rastreados", labelEn: "Products analyzed" },
+  { value: "Foto ou link", labelPt: "para começar", labelEn: "to get started" },
+  { value: "9:16", labelPt: "pronto para TikTok", labelEn: "ready for TikTok" },
+  { value: "R$ 4,90", labelPt: "primeiro pacote", labelEn: "first token pack" },
 ] as const;
 
 export const resultVideos = [
@@ -100,7 +100,7 @@ export const landingPillars = [
     titleEn: "Product radar",
     textPt: "Produtos em alta, sellers e contexto para escolher melhor onde gastar energia.",
     textEn: "Hub, trends, sellers, and product context so you stop hunting blind.",
-    stat: "100K+",
+    stat: "TikTok Shop",
   },
   {
     icon: Gauge,
@@ -108,7 +108,7 @@ export const landingPillars = [
     titleEn: "Score before tokens",
     textPt: "Demanda, prova social, risco e chance de criativo antes de gastar token.",
     textEn: "Demand, social proof, risk, and creative potential before spending time or credits.",
-    stat: "91",
+    stat: "4 sinais",
   },
   {
     icon: Wand2,
@@ -116,7 +116,7 @@ export const landingPillars = [
     titleEn: "AI video studio",
     textPt: "Imagem ou link viram prompt, primeira imagem, vídeo vertical e legenda de venda.",
     textEn: "Image or link becomes prompt, first frame, vertical video, and sales caption.",
-    stat: "8/16s",
+    stat: "9:16",
   },
   {
     icon: Scissors,
@@ -124,7 +124,7 @@ export const landingPillars = [
     titleEn: "Editor and gallery",
     textPt: "Finalize, transcreva, corte, acompanhe status e reutilize o que já performou.",
     textEn: "Finish, transcribe, trim, track status, and reuse what already worked.",
-    stat: "100%",
+    stat: "Editor + galeria",
   },
   {
     icon: Rocket,
@@ -140,7 +140,7 @@ export const landingPillars = [
     titleEn: "Creator community",
     textPt: "Criadores competem por pontos e tokens enquanto testam criativos reais.",
     textEn: "Leaderboard, tokens, and creators testing real products at sprint speed.",
-    stat: "200+",
+    stat: "Semanal",
   },
 ] as const;
 
