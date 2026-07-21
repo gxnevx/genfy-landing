@@ -11,6 +11,8 @@ test("landing uses specific conversion copy instead of generic CTAs", async () =
 
   for (const component of [desktop, mobile]) {
     assert.match(component, /Criar conta grátis/);
+    assert.match(component, /200 tokens/);
+    assert.match(component, /primeiro vídeo/);
     assert.match(component, /Vídeos a partir de R\$ 4,90/);
     assert.match(component, /Me avisar no WhatsApp/);
     assert.match(component, /pronto para publicar/);

@@ -51,9 +51,9 @@ const copy = {
     heroChip: "Foto ou link · Vídeo 9:16 · TikTok Shop",
     heroTitle: ["Crie vídeos", "de produto.", "Sem gravar.", "Sem editar."],
     heroLede:
-      "Envie uma foto ou cole o link do produto. O Genfy gera um vídeo vertical com IA pronto para testar no TikTok Shop.",
+      "Envie uma foto ou cole o link do produto. O Genfy gera um vídeo vertical com IA pronto para testar no TikTok Shop. Sua conta libera 200 tokens para o primeiro vídeo.",
     heroCta: "Criar conta grátis",
-    heroAside: "Sem cartão · Vídeos a partir de R$ 4,90",
+    heroAside: "200 tokens grátis · Sem cartão · Depois, vídeos a partir de R$ 4,90",
     resultsEyebrow: "Saiu do Genfy",
     resultsTitle: ["Veja o produto ganhar ", "cara de anúncio."],
     cycleEyebrow: "O ciclo",
@@ -79,9 +79,9 @@ const copy = {
     closingEyebrow: "Feito no Brasil",
     closingTitle: ["Seu próximo vídeo ", "começa com uma foto ou link."],
     closingLede:
-      "Produto, score e vídeo no mesmo fluxo. Pra competir com quem está mais acima na esteira sem perder o dia editando.",
+      "Produto, score e vídeo no mesmo fluxo. Crie sua conta, receba 200 tokens e gere o primeiro vídeo sem cartão.",
     closingCta: "Criar conta grátis",
-    closingAside: "Sem cartão · Vídeos a partir de R$ 4,90",
+    closingAside: "200 tokens grátis · Vídeos a partir de R$ 4,90",
   },
   en: {
     heroChip: "Good product · Viral video · TikTok Shop",
@@ -126,7 +126,7 @@ const aiVideoHeroCopy = {
     heroChip: "Foto para vídeo IA · Produto · Anúncio",
     heroTitle: ["Transforme foto", "em vídeo com IA.", "Pronto para", "produto e anúncio."],
     heroLede:
-      "Envie uma foto ou cole o link do produto. Gere um vídeo vertical com Veo 3.1 ou Seedance 2.0 — sem câmera e sem editar.",
+      "Envie uma foto ou cole o link do produto. Gere um vídeo vertical com Veo 3.1 ou Seedance 2.0 — sem câmera e sem editar. Sua conta libera 200 tokens para o primeiro vídeo.",
     heroCta: "Criar conta grátis",
   },
   en: {
